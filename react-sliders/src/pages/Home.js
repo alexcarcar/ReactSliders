@@ -1,8 +1,8 @@
 // Home.js
 import React from 'react';
+import './Home.css';
 import Slider from '../components/Slider';
 import categories from '../data/categories';
-import './Home.css'; // Optional: for page-specific styling
 
 function Home() {
   return (

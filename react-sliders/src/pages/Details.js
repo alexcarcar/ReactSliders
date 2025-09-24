@@ -1,15 +1,23 @@
 // Details.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import items from '../data/allItems'; // Combine all slider items into one array or fetch from API
+import categories from '../data/categories';
 import './Details.css';
 
 function Details() {
   const { id } = useParams();
-  const item = items.find((item) => item.id === id);
+
+  // Flatten all category items into one array
+  const allItems = categories.flatMap((category) => category.items);
+  const item = allItems.find((item) => item.id === id);
 
   if (!item) {
-    return <div className="details">Item not found.</div>;
+    return (
+      <div className="details">
+        <h2>Item not found</h2>
+        <p>We couldn't locate the content you're looking for.</p>
+      </div>
+    );
   }
 
   return (

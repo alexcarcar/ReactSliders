@@ -2,9 +2,14 @@
 .card {
   position: relative;
   width: 200px;
+  height: 300px;
   margin-right: 15px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #222;
 }
 
 .card:hover {
@@ -13,9 +18,10 @@
 
 .card-image {
   width: 100%;
-  height: auto;
-  border-radius: 6px;
+  height: 100%;
+  object-fit: cover;
   display: block;
+  border-radius: 8px;
 }
 
 .card-overlay {
@@ -25,10 +31,81 @@
   color: #fff;
   width: 100%;
   padding: 10px;
-  border-radius: 0 0 6px 6px;
+  box-sizing: border-box;
 }
 
 .card-title {
   font-size: 1rem;
   font-weight: 600;
+}
+
+/* Card.css additions */
+
+.card-modal {
+  position: absolute;
+  width: auto;
+  max-width: 400px;
+  background: #111;
+  color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.card-overlay-bg {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal-image {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modal-details h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.modal-details p {
+  font-size: 0.95rem;
+  margin: 4px 0;
+  text-align: center;
+}
+
+.watch-button {
+  background-color: #e50914;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  margin-top: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.close-button {
+  background: none;
+  color: #aaa;
+  border: none;
+  margin-top: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translate(-50%, -60%); }
+  to { opacity: 1; transform: translate(-50%, -50%); }
 }

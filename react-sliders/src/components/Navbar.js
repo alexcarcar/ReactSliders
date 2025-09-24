@@ -5,7 +5,7 @@ import './Navbar.css';
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">🎬 StreamFlex</div>
+      <div className="logo">🎬 Alex Stream</div>
       <ul className="nav-links">
         <li><a href="/">Home</a></li>
         <li><a href="/movies">Movies</a></li>

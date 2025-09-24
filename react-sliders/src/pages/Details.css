@@ -1,0 +1,46 @@
+/* Details.css */
+
+.details {
+  padding: 40px;
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.details-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.details-image {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.details-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.details-info h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.details-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.details-info strong {
+  color: #e50914;
+}

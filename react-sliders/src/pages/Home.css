@@ -1,0 +1,21 @@
+/* Home.css */
+
+.home {
+  padding: 40px 20px;
+  background-color: #111;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.category-section {
+  margin-bottom: 60px;
+}
+
+.category-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  color: #e5e5e5;
+  border-left: 4px solid #e50914;
+}
